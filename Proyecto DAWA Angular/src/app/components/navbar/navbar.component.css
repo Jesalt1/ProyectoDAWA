@@ -1,0 +1,31 @@
+/* Clases para el modo oscuro del navbar */
+.navbar-dark {
+  background-color: #a2c3bb;
+}
+
+.navbar-dark .navbar-brand {
+  color: #0d3c68;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+  color: #0d3c68;
+}
+
+.navbar-dark .btn-outline-danger {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.navbar-dark .btn-outline-danger:hover,
+.navbar-dark .btn-outline-danger:focus {
+  color: #dc3545;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.nav-link {
+  color: black;
+}
+

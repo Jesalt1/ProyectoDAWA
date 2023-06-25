@@ -1,0 +1,42 @@
+body {
+  background-color: #f2c93d;
+
+  }
+  
+  .card {
+  background-color: #f2c93d;
+  color: #fff;
+  width: 400px;
+  }
+
+  
+  form label {
+  color: #6a6a6a;
+  }
+  
+  form input.form-control {
+  background-color: rgb(173, 165, 165);
+  color: #6a6a6a;
+  }
+  
+  form button.btn-primary {
+  background-color: #e6494e;
+  border-color: #e6494e;
+  }
+  
+  form button.btn-primary:hover {
+  background-color: #d3353b;
+  border-color: #d3353b;
+  }
+  
+  form p {
+  color: #6a6a6a;
+  }
+  
+  form p a {
+  color: #6a6a6a;
+  }
+  
+  form p a:hover {
+  color: #fff;
+  }

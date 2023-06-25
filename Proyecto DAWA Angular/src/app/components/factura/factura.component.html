@@ -1,0 +1,93 @@
+<div class="container">
+    <div *ngIf="!factura">
+        <h2>Buscar Cliente</h2>
+        <div class="mb-3">
+            <label for="clienteCedula" >Cédula del Cliente:</label>
+            <input type="text" id="clienteCedula" [(ngModel)]="cedulaCliente" name="clienteCedula" class="form-control"
+                maxlength="10">
+        </div>
+        <button type="button"  (click)="buscarCliente()">Buscar Cliente</button>
+    </div>
+    <div *ngIf="factura">
+        <h2>Factura</h2>
+        <p>Número de Factura: {{ factura.numeroFactura }}</p>
+        <p>Fecha de Emisión: {{ factura.fechaEmision | date }}</p>
+        <h3>Cliente</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ factura.cliente.nombre }}</td>
+                    <td>{{ factura.cliente.direccion }}</td>
+                    <td>{{ factura.cliente.telefono }}</td>
+                    <td>{{ factura.cliente.correoElectronico }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <h3>Agregar Producto</h3>
+        <div class="mb-3">
+            <label for="codigo" >Código del Producto:</label>
+            <input type="text" id="codigo" [(ngModel)]="codigoProducto" name="codigo" class="form-control">
+            <button type="button"  (click)="buscarProducto()">Buscar Producto</button>
+        </div>
+
+        <div *ngIf="productoEncontrado">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ productoEncontrado.nombre }}</td>
+                        <td>{{ productoEncontrado.descripcion }}</td>
+                        <td>{{ productoEncontrado.categoria.nombre }}</td>
+                        <td>{{ productoEncontrado.precioUnitario | currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="!productoEncontrado">
+            <p>No se encontró ningún producto con el código ingresado.</p>
+        </div>
+        <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad:</label>
+            <input type="number" id="cantidad" [(ngModel)]="cantidad" name="cantidad" class="form-control">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="agregarItem()">Agregar Item</button>
+        <h3>Detalle de la Factura</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of factura.items">
+                    <td>{{ item.producto.nombre }}</td>
+                    <td>{{ item.cantidad }}</td>
+                    <td>{{ item.precioUnitario | currency }}</td>
+                    <td>{{ item.subtotal | currency }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="fw-bold">Monto Total: {{ factura.montoTotal | currency }}</p>
+
+        <button type="button" class="btn btn-success" (click)="generarFactura()">Generar Factura</button>
+    </div> -->
+</div>
